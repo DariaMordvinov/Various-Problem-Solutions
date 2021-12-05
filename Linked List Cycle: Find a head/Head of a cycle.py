@@ -32,8 +32,8 @@ def find_cycle_start(head):
         return None
     cycle_length = find_length_cycle(head)
     slow = fast = head
-    # We iterate through the list: if we go from current Node n steps ahead (where n == cycle length),
-    # we'll encounter the same node again
+    # We iterate through the list: if we go from the current Node n steps ahead (where n == cycle length),
+    # and encounter the same node again - it is the head of the cycle
     while True:
         count = 1
         while count < cycle_length + 1:
